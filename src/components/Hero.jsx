@@ -83,9 +83,9 @@ const Hero = () => {
 	const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
 
 	return (
-		<div className="relative h-dvh w-screen overflow-x-hidden">
+		<div className="relative h-svh md:h-dvh w-dvw overflow-x-hidden">
 			{isLoading && (
-				<div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden">
+				<div className="flex-center absolute z-[100] h-svh w-dvw overflow-hidden">
 					<div className="three-body">
 						<div className="three-body__dot" />
 						<div className="three-body__dot" />
@@ -94,13 +94,15 @@ const Hero = () => {
 				</div>
 			)}
 
-			<div id="video-frame" className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75">
+			<div
+				id="video-frame"
+				className="relative z-10 h-svh md:h-dvh w-dvw md:w-[102vw] overflow-clip rounded-lg ">
 				<div className="">
-					<div className="mask-clip-path absolute-center absolute size-20  z-50 md:size-52 cursor-pointer overflow-hidden rounded-lg">
+					<div className="mask-clip-path absolute-center absolute  z-50  cursor-pointer overflow-hidden rounded-lg">
 						<div
 							id="mini-video"
 							onClick={handleMiniVdClick}
-							className="origin-center aspect-square size-20 md:size-64  md:scale-50 md:hover:scale-110 md:opacity-0 md:hover:opacity-100 transition-all duration-500 ease-in">
+							className="origin-center aspect-square size-64  scale-50 hover:scale-110 opacity-0 md:hover:opacity-100 transition-all duration-500 ease-in">
 							<video
 								id="current-video"
 								ref={nextVideoRef}
@@ -108,7 +110,7 @@ const Hero = () => {
 								loop
 								muted
 								// autoPlay
-								className="size-20 md:size-64 origin-center md:scale-150  rounded-lg  object-cover object-center"
+								className="size-64 origin-center scale-150  rounded-lg  object-cover object-center"
 								onLoadedData={handleVideoLoaded}
 							/>
 						</div>
@@ -121,7 +123,7 @@ const Hero = () => {
 						muted
 						// autoPlay
 						id="next-video"
-						className="absolute-center  invisible absolute z-20 size-64 object-cover object-center"
+						className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
 						onLoadedData={handleVideoLoaded}
 					/>
 

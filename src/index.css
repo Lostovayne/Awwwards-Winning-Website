@@ -6,13 +6,14 @@
 
 *,
 *::before,
-*::after {
+*::after,
+html {
 	scrollbar-width: none;
 }
 
 body {
-	width: 100dvw;
-	overflow-x: hidden;
+	width: 100%;
+	overflow-x: clip;
 	background-color: #dfdff0;
 	font-family: "General Sans", sans-serif;
 }
