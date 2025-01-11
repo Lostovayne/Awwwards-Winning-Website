@@ -100,7 +100,7 @@ const Hero = () => {
 						<div
 							id="mini-video"
 							onClick={handleMiniVdClick}
-							className="origin-center aspect-square  max-sm:mt-10 size-32 md:size-64  scale-50 md:hover:scale-110 md:opacity-0 hover:opacity-100 transition-all duration-500  ease-in">
+							className="origin-center aspect-square  max-sm:mt-10 size-32 md:size-64  md:scale-50 md:hover:scale-110 md:opacity-0 md:hover:opacity-100 transition-all duration-500 ease-in">
 							<video
 								id="current-video"
 								ref={nextVideoRef}
@@ -108,7 +108,7 @@ const Hero = () => {
 								loop
 								muted
 								// autoPlay
-								className=" size-32 md:size-64 origin-center scale-150  max-sm:border border-black max-sm:shadow-lg  rounded-lg  object-cover object-center"
+								className="size-32 md:size-64 origin-center md:scale-150  max-sm:border md:border-black max-sm:shadow-lg  rounded-lg  object-cover object-center"
 								onLoadedData={handleVideoLoaded}
 							/>
 						</div>
