@@ -54,7 +54,7 @@ const Hero = () => {
 				gsap.from("#current-video", {
 					transformOrigin: "center center",
 					scale: 0,
-					duration: 2,
+					duration: 1.3,
 					ease: "power1.inOut"
 				});
 			}
@@ -95,12 +95,12 @@ const Hero = () => {
 			)}
 
 			<div id="video-frame" className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75">
-				<div>
-					<div className="mask-clip-path absolute-center absolute  z-50 size-52 cursor-pointer overflow-hidden rounded-lg">
+				<div className="">
+					<div className="mask-clip-path absolute-center absolute size-20  z-50 md:size-52 cursor-pointer overflow-hidden rounded-lg">
 						<div
 							id="mini-video"
 							onClick={handleMiniVdClick}
-							className="origin-center aspect-square  max-sm:mt-16 size-20 md:size-64  md:scale-50 md:hover:scale-110 md:opacity-0 md:hover:opacity-100 transition-all duration-500 ease-in">
+							className="origin-center aspect-square size-20 md:size-64  md:scale-50 md:hover:scale-110 md:opacity-0 md:hover:opacity-100 transition-all duration-500 ease-in">
 							<video
 								id="current-video"
 								ref={nextVideoRef}
@@ -108,7 +108,7 @@ const Hero = () => {
 								loop
 								muted
 								// autoPlay
-								className="size-20 md:size-64 origin-center md:scale-150  max-sm:border md:border-black max-sm:shadow-lg  rounded-lg  object-cover object-center"
+								className="size-20 md:size-64 origin-center md:scale-150  rounded-lg  object-cover object-center"
 								onLoadedData={handleVideoLoaded}
 							/>
 						</div>
