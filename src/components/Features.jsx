@@ -5,15 +5,37 @@ const BentoTilt = ({ children, className = "" }) => {
 	const [transformStyle, setTransformStyle] = useState("");
 	const itemRef = useRef();
 
-	const handleMouseMove = (e) => {};
+	const handleMouseMove = (e) => {
+		if (!itemRef.current) return;
+	};
 
 	const handleMouseLeave = () => {
 		setTransformStyle("");
 	};
 
-	return <div className={className}>{children}</div>;
+	return (
+		<div
+			ref={itemRef}
+			className={className}
+			onMouseMove={handleMouseMove}
+			onMouseLeave={handleMouseLeave}
+			style={{
+				transform: transformStyle
+			}}>
+			{children}
+		</div>
+	);
 };
 
+/**
+ * Componente BentoCard que renderiza una tarjeta con un video de fondo y texto sobre él.
+ *
+ * @param {Object} props - Los props del componente.
+ * @param {string} props.src - La fuente del video.
+ * @param {React.ReactNode} props.title - El título de la tarjeta.
+ * @param {string} props.description - La descripción de la tarjeta.
+ * @returns {React.ReactNode} - El componente BentoCard.
+ */
 const BentoCard = ({ src, title, description }) => {
 	return (
 		<div className="relative size-full">

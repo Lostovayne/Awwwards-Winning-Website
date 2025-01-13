@@ -11,19 +11,17 @@ const About = () => {
 			scrollTrigger: {
 				trigger: "#clip",
 				start: "center center",
-				end: "+=350 center",
-				scrub: 0.3,
+				end: "+=450 center",
+				scrub: 0.5,
 				pin: true,
 				pinSpacing: true
 			}
 		});
 
 		clipAnimation.to(".mask-clip-path", {
-			width: "105%",
-			height: "105%",
-			borderRadius: 0,
-			overflow: "clip",
-			transformOrigin: "center center"
+			width: "100%",
+			height: "100%",
+			borderRadius: 0
 		});
 	});
 
@@ -41,7 +39,7 @@ const About = () => {
 				</div>
 			</div>
 
-			<div className="h-lvh md:h-dvh w-dvw" id="clip">
+			<div className="h-lvh md:h-dvh w-full" id="clip">
 				<div className="mask-clip-path about-image overflow-clip">
 					<img src="img/about.webp" alt="Background" className="absolute inset-0  size-full object-cover " />
 				</div>
