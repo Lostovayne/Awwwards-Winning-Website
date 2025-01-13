@@ -1,113 +1,144 @@
-# Awwwards Website
+# 🏆 Awwwards Website
 
-<img src="public/resource.png" alt="Awwwards Website" width="100%" />
+<div align="center">
+  <img src="public/resource.png" alt="Awwwards Website" width="100%" />
+  <p align="center">
+    <a href="#características">Características</a> •
+    <a href="#tecnologías">Tecnologías</a> •
+    <a href="#instalación">Instalación</a> •
+    <a href="#uso">Uso</a> •
+    <a href="#estructura">Estructura</a>
+  </p>
+</div>
 
-## Overview
+## 🌟 Descripción General
 
-The Awwwards Website is a modern web application built using React and Vite, showcasing a dynamic and interactive user experience. This project utilizes various technologies including Tailwind CSS for styling, GSAP for animations, and React for building user interfaces. The website is designed to be responsive and visually appealing, making it suitable for showcasing creative projects.
+Una aplicación web moderna construida con React y Vite, que presenta una experiencia de usuario dinámica e interactiva. Este proyecto utiliza tecnologías de vanguardia para crear una plataforma visualmente impresionante y altamente funcional.
 
-## Table of Contents
+## ✨ Características
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [File Structure](#file-structure)
-- [Contributing](#contributing)
-- [License](#license)
+| Categoría          | Características                                                                    |
+| ------------------ | ---------------------------------------------------------------------------------- |
+| 📱 **Diseño**      | • Totalmente responsive<br/>• Interfaz moderna<br/>• Experiencia de usuario fluida |
+| 🎥 **Multimedia**  | • Galería de videos dinámica<br/>• Interacción con videos en tiempo real           |
+| 🎨 **Estilo**      | • Animaciones GSAP personalizadas<br/>• Fuentes tipográficas exclusivas            |
+| ⚡ **Rendimiento** | • Optimización de carga<br/>• Transiciones suaves                                  |
 
-## Features
+## 🛠️ Tecnologías
 
-- **Responsive Design**: The website is fully responsive, adapting to different screen sizes.
-- **Dynamic Video Gallery**: Users can interact with a video gallery that changes based on user input.
-- **Smooth Animations**: Utilizes GSAP for smooth transitions and animations.
-- **Custom Fonts**: Incorporates various custom fonts for a unique look and feel.
+<table>
+  <tr>
+    <th>Tecnología</th>
+    <th>Versión</th>
+    <th>Propósito</th>
+  </tr>
+  <tr>
+    <td><img src="https://reactjs.org/favicon.ico" width="16"/> React</td>
+    <td>18.3.1</td>
+    <td>Framework principal</td>
+  </tr>
+  <tr>
+    <td><img src="https://vitejs.dev/logo.svg" width="16"/> Vite</td>
+    <td>6.0.7</td>
+    <td>Build tool y desarrollo</td>
+  </tr>
+  <tr>
+    <td><img src="https://tailwindui.com/favicon.ico" width="16"/> Tailwind CSS</td>
+    <td>3.4.17</td>
+    <td>Framework CSS</td>
+  </tr>
+  <tr>
+    <td>🎭 GSAP</td>
+    <td>3.12.5</td>
+    <td>Animaciones</td>
+  </tr>
+</table>
 
-## Technologies Used
+## 🚀 Instalación
 
-| Technology   | Description                                                    |
-| ------------ | -------------------------------------------------------------- |
-| React        | A JavaScript library for building user interfaces.             |
-| Vite         | A build tool that provides a fast development environment.     |
-| Tailwind CSS | A utility-first CSS framework for styling.                     |
-| GSAP         | A JavaScript library for high-performance animations.          |
-| ESLint       | A tool for identifying and fixing problems in JavaScript code. |
-| PostCSS      | A tool for transforming CSS with JavaScript plugins.           |
+```bash
+# Clonar el repositorio
+git clone https://github.com/LostoVayne/awwwards.git
 
-## Installation
+# Instalar dependencias
+npm install
 
-To set up the project locally, follow these steps:
-
-1. **Clone the repository**:
-
-   ```bash
-   git clone https://github.com/yourusername/awwwards.git
-   cd awwwards
-   ```
-
-2. **Install dependencies**:
-
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**:
-
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser** and navigate to `http://localhost:3000` to view the application.
-
-## Usage
-
-The Awwwards Website features a hero section with a dynamic video gallery. Users can click on video thumbnails to load and play different videos. The animations are handled by GSAP, providing a smooth user experience.
-
-### Video Gallery Interaction
-
-- Click on the video thumbnail to load the next video.
-- The current video will scale down while the next video scales up and plays.
-
-## File Structure
-
-The project has the following structure:
-
+# Iniciar servidor de desarrollo
+npm run dev
 ```
+
+## 💻 Uso
+
+### Galería de Videos Interactiva
+
+```javascript
+// Ejemplo de interacción con la galería
+const handleVideoClick = (videoId) => {
+	// Cambiar video actual
+	setCurrentVideo(videoId);
+	// Activar animación GSAP
+	gsap.to(videoRef.current, {
+		scale: 1.2,
+		duration: 0.5
+	});
+};
+```
+
+## 📁 Estructura
+
+```bash
 awwwards/
-├── public/
-│   └── resource.png
-├── src/
-│   ├── components/
-│   │   ├── Button.jsx
-│   │   └── Hero.jsx
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── .gitignore
-├── package.json
-├── postcss.config.js
-├── tailwind.config.js
-└── vite.config.js
+├── 📂 public/
+│   └── 🖼️ resource.png
+├── 📂 src/
+│   ├── 📂 components/
+│   │   ├── 🔘 Button.jsx
+│   │   └── 🎯 Hero.jsx
+│   ├── 📄 App.jsx
+│   ├── 🎨 index.css
+│   └── 📄 main.jsx
 ```
 
-### Component Breakdown
+### Componentes Principales
 
-| Component    | Description                                                                 |
-| ------------ | --------------------------------------------------------------------------- |
-| `Button.jsx` | A reusable button component with customizable icons and styles.             |
-| `Hero.jsx`   | The main component that displays the hero section with video functionality. |
-| `App.jsx`    | The root component that renders the main application layout.                |
+<table>
+  <tr>
+    <th>Componente</th>
+    <th>Descripción</th>
+    <th>Estado</th>
+  </tr>
+  <tr>
+    <td>🎯 Hero.jsx</td>
+    <td>Componente principal con galería de videos</td>
+    <td>✅ Estable</td>
+  </tr>
+  <tr>
+    <td>🔘 Button.jsx</td>
+    <td>Botón reutilizable con estilos personalizados</td>
+    <td>✅ Estable</td>
+  </tr>
+  <tr>
+    <td>📱 App.jsx</td>
+    <td>Componente raíz de la aplicación</td>
+    <td>✅ Estable</td>
+  </tr>
+</table>
 
-## Contributing
+## 🤝 Contribución
 
-Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+1. Fork el repositorio
+2. Crea tu rama de características (`git checkout -b feature/NuevaCaracteristica`)
+3. Commit tus cambios (`git commit -m 'Añadir nueva característica'`)
+4. Push a la rama (`git push origin feature/NuevaCaracteristica`)
+5. Abre un Pull Request
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeature`).
-3. Make your changes and commit them (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a pull request.
+## 📄 Licencia
 
-## License
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+---
+
+<div align="center">
+  <p>¿Te gusta este proyecto? ¡Dale una ⭐!</p>
+  <p>Creado con ❤️ por <a href="https://github.com/yourusername">Deus lo Vult</a></p>
+</div>
