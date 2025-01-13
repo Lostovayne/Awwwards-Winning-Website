@@ -5,8 +5,20 @@ const BentoTilt = ({ children, className = "" }) => {
 	const [transformStyle, setTransformStyle] = useState("");
 	const itemRef = useRef();
 
-	const handleMouseMove = (e) => {
+	const handleMouseMove = (event) => {
 		if (!itemRef.current) return;
+
+		const { left, top, width, height } = itemRef.current.getBoundingClientRect();
+
+		const relativeX = (event.clientX - left) / width;
+		const relativeY = (event.clientY - top) / height;
+
+		const tiltX = (relativeX - 0.5) * 15;
+		const tiltY = (relativeY - 0.5) * -15;
+
+		const newTransform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(0.97, 0.97, 0.97)`;
+
+		setTransformStyle(newTransform);
 	};
 
 	const handleMouseLeave = () => {
@@ -16,7 +28,7 @@ const BentoTilt = ({ children, className = "" }) => {
 	return (
 		<div
 			ref={itemRef}
-			className={className}
+			className={`transition-all cursor-pointer ${className}`}
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}
 			style={{
@@ -130,7 +142,8 @@ const Features = () => {
 							loop
 							muted
 							autoPlay
-							className="size-full object-cover object-center "></video>
+							className="size-full object-cover object-center "
+						/>
 					</BentoTilt>
 				</div>
 			</div>

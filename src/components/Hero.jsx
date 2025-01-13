@@ -47,14 +47,14 @@ const Hero = () => {
 					scale: 1,
 					width: "100%",
 					height: "100%",
-					duration: 0.8,
+					duration: 1.5,
 					ease: "power1.inOut",
 					onStart: () => nextVideoRef.current.play()
 				});
 				gsap.from("#current-video", {
 					transformOrigin: "center center",
 					scale: 0,
-					duration: 1.3,
+					duration: 1,
 					ease: "power1.inOut"
 				});
 			}

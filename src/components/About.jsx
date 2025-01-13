@@ -34,8 +34,13 @@ const About = () => {
 					containerClass={"mt-5 !text-black text-center"}
 				/>
 				<div className="about-subtext">
-					<p>The Game of Games begins-your life, now an epic MMORPG</p>
-					<p>Zentry unites every player from countless games and platforms</p>
+					<p className="text-black">The Metagame begins-your life, now an epic MMORPG</p>
+					<div>
+						<p className="text-gray-500/80">
+							Zentry is the unified play layer that bridges players, agentic AI, and blockchains, creating a
+							new era of gaming.
+						</p>
+					</div>
 				</div>
 			</div>
 
