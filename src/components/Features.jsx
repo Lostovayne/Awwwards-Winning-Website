@@ -85,7 +85,7 @@ const Features = () => {
 						src="videos/feature-1.mp4"
 						title={
 							<>
-								radi<b>n</b>t
+								radia<b>n</b>t
 							</>
 						}
 						description="A cross-platform metagame app, turning your activities acrossWeb2 and Web3 games into a rewarding adventure."
