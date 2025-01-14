@@ -126,11 +126,11 @@ awwwards/
 
 ## Caracteristicas que faltan agregar
 
-- [] Agregar Clip Path a la imagen del about para que tenga el efecto de un rombo
-- [] Agregar Animacion a la card usando eventos del mouse para moverla al igual que las del BentoTilt
-- [] Agregar animacion al mini video del hero para que se expanda correctamente
-- [] Agregar elementos absolute junto a la imagen del about para que se puedan mover con el mouse
-- [] Optimizar los recursos correspondientes a videos para reducir su peso
+- [ ] Agregar Clip Path a la imagen del about para que tenga el efecto de un rombo
+- [ ] Agregar Animacion a la card usando eventos del mouse para moverla al igual que las del BentoTilt
+- [ ] Agregar animacion al mini video del hero para que se expanda correctamente
+- [ ] Agregar elementos absolute junto a la imagen del about para que se puedan mover con el mouse
+- [ ] Optimizar los recursos correspondientes a videos para reducir su peso
 
 ## 🤝 Contribución (Se aceptan Pull Requests)
 
