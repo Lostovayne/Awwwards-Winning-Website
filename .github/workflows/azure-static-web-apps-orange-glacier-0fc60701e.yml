@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           # Elige la versión de Node.js que usas en tu proyecto
-          node-version: '22.16.0' 
+          node-version: '18.20.8' 
           # Activa el caché para npm. Usará el archivo package-lock.json como clave.
           cache: 'npm' 
       # --- FIN DE LA MEJORA ---
