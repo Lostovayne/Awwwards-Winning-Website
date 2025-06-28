@@ -15,10 +15,21 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
           lfs: false
+
+      # --- INICIO DE LA MEJORA ---
+      - name: Set up Node.js with caching
+        uses: actions/setup-node@v4
+        with:
+          # Elige la versión de Node.js que usas en tu proyecto
+          node-version: '22.16.0' 
+          # Activa el caché para npm. Usará el archivo package-lock.json como clave.
+          cache: 'npm' 
+      # --- FIN DE LA MEJORA ---
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -45,4 +56,3 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ORANGE_GLACIER_0FC60701E }}
           action: "close"
           app_location: "/" # Required input, set to your app's source path
-
